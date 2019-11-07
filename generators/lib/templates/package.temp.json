@@ -3,9 +3,10 @@
   "typings": "dist/index.d.ts",
   "files": ["dist"],
   "scripts": {
+    "format": "prettier --write \"./**/*.{js,ts,json,yaml}\"",
+    "test": "npm run format && mocha --require ts-node/register test/test-*.ts",
     "compile": "rm -rf dist && tsc",
-    "prepublish": "npm run compile",
-    "test": "mocha --require ts-node/register test/test-index.ts"
+    "prepublish": "npm run test && npm run compile"
   },
   "devDependencies": {
     "@types/chai": "^4.2.4",
