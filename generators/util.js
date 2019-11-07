@@ -19,7 +19,8 @@ exports.genPackage = (base, addtion) => {
     description: addtion.description,
     keywords: addtion.keywords,
     author: addtion.author,
-    license: addtion.license
+    license: addtion.license,
+    files: ["dist"]
   };
   Object.assign(pkg, base);
   if (addtion.repo) {
