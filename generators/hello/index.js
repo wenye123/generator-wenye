@@ -48,7 +48,7 @@ module.exports = class extends Generator {
     }
     // 复制文件
     this.fs.copy(
-      this.templatePath(".gitignore"),
+      this.templatePath("gitignore"),
       this.destinationPath(".gitignore")
     );
     this.fs.copyTpl(

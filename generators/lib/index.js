@@ -49,14 +49,11 @@ module.exports = class extends Generator {
       );
     }
     // 复制文件
-    [
-      "README.md",
-      "tsconfig.json",
-      ".gitignore",
-      ".editorconfig",
-      ".prettierrc.js"
-    ].forEach(v => {
+    ["README.md", "tsconfig.json"].forEach(v => {
       this.fs.copy(this.templatePath(v), this.destinationPath(v));
+    });
+    ["gitignore", "editorconfig", "prettierrc.js"].forEach(v => {
+      this.fs.copy(this.templatePath(v), this.destinationPath(`.${v}`));
     });
     // 复制目录
     ["src", "test"].forEach(v => {
