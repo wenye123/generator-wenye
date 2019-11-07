@@ -69,7 +69,7 @@
     ]
   },
   "scripts": {
-    "pretest": "eslint . --fix && prettier --write \"./**/*.{js,ts,json,yaml}\"",
+    "pretest": "prettier --write \"./**/*.{js,ts,json,yaml}\"",
     "test": "jest"
   },
   "repository": "wenye123/generator-wenye",
