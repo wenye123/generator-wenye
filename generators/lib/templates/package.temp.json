@@ -1,6 +1,7 @@
 {
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
+  "files": ["dist"],
   "scripts": {
     "compile": "rm -rf dist && tsc",
     "prepublish": "npm run compile",

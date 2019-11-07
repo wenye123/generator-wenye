@@ -40,7 +40,9 @@ module.exports = class extends Generator {
   writing() {
     // 不存在才更新package.json
     if (!this.isExits) {
-      const packageInfo = this.fs.readJSON(this.templatePath("package.json"));
+      const packageInfo = this.fs.readJSON(
+        this.templatePath("package.temp.json")
+      );
       this.fs.extendJSON(
         this.destinationPath("package.json"),
         genPackage(packageInfo, this.props)
