@@ -21,6 +21,7 @@ describe("generator-wenye:lib", () => {
     assert.file([".gitignore"]);
     assert.file([".editorconfig"]);
     assert.file([".prettierrc.js"]);
+    assert.file([".travis.yml"]);
     assert.file(["src"]);
     assert.file(["test"]);
   });

@@ -1,1 +1,3 @@
-export const str = "hello";
+export function getStr() {
+  return "hello";
+}

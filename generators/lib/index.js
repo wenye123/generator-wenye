@@ -3,6 +3,7 @@ const Generator = require("yeoman-generator");
 const chalk = require("chalk");
 const yosay = require("yosay");
 const { genPackage, commonPrompts } = require("../util");
+const { devDeps } = require("./util");
 
 module.exports = class extends Generator {
   constructor(args, opts) {
@@ -52,7 +53,7 @@ module.exports = class extends Generator {
     ["README.md", "tsconfig.json"].forEach(v => {
       this.fs.copy(this.templatePath(v), this.destinationPath(v));
     });
-    ["gitignore", "editorconfig", "prettierrc.js"].forEach(v => {
+    ["gitignore", "editorconfig", "prettierrc.js", "travis.yml"].forEach(v => {
       this.fs.copy(this.templatePath(v), this.destinationPath(`.${v}`));
     });
     // 复制目录
@@ -62,9 +63,7 @@ module.exports = class extends Generator {
   }
 
   install() {
-    this.installDependencies({
-      npm: true,
-      bower: false
-    });
+    const registry = "https://registry.npm.taobao.org";
+    this.npmInstall(devDeps, { "save-dev": true, registry });
   }
 };
