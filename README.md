@@ -1,7 +1,7 @@
 # generator-wenye
 
 [![Build Status](https://travis-ci.org/wenye123/generator-wenye.svg?branch=master)](https://travis-ci.org/wenye123/generator-wenye)
-[![npm](https://badge.fury.io/js/generator-wenye.svg)](https://travis-ci.com/wenye123/generator-wenye)
+[![npm](https://badge.fury.io/js/generator-wenye.svg)](https://www.npmjs.com/package/generator-wenye)
 
 > wenye 专属的 yo 脚手架
 
