@@ -8,7 +8,6 @@ module.exports = class extends Generator {
 
   help() {
     this.log(`${pkg.name}@${pkg.version}\n`);
-    this.log("使用 `yo wenye:hello` hello world\n");
     this.log("使用 `yo wenye:lib` 初始化工具库\n");
     return "----使用说明----";
   }
