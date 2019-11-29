@@ -1,7 +1,9 @@
+const fs = require("fs");
+
 /** 获取git远程地址 */
 function getGitOrigin(gitConfigFile) {
   try {
-    const gitConfig = fs.readFileSync(gitConfigFile, "utf-8");
+    const gitConfig = fs.readFileSync(gitConfigFile, "utf8");
     const m = gitConfig.match(/\s+url\s+=\s+(\S+)\s+/i);
     if (m) {
       return m[1].replace(/https?:\/\//, "").replace(/:/g, "/");
