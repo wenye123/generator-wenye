@@ -22,6 +22,8 @@ describe("generator-wenye:lib", () => {
     assert.file([".editorconfig"]);
     assert.file([".prettierrc.js"]);
     assert.file([".travis.yml"]);
+    assert.file([".mocharc.yml"]);
+    assert.file(["bin"]);
     assert.file(["src"]);
     assert.file(["test"]);
   });

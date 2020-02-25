@@ -53,11 +53,17 @@ module.exports = class extends Generator {
     ["README.md", "tsconfig.json"].forEach(v => {
       this.fs.copy(this.templatePath(v), this.destinationPath(v));
     });
-    ["gitignore", "editorconfig", "prettierrc.js", "travis.yml"].forEach(v => {
+    [
+      "gitignore",
+      "editorconfig",
+      "prettierrc.js",
+      "travis.yml",
+      "mocharc.yml"
+    ].forEach(v => {
       this.fs.copy(this.templatePath(v), this.destinationPath(`.${v}`));
     });
     // 复制目录
-    ["src", "test"].forEach(v => {
+    ["src", "test", "bin"].forEach(v => {
       this.fs.copy(this.templatePath(v), this.destinationPath(v));
     });
   }
