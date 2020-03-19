@@ -51,7 +51,10 @@ module.exports = class extends Generator {
     }
     // 复制文件
     ["README.md", "tsconfig.json"].forEach(v => {
-      this.fs.copy(this.templatePath(v), this.destinationPath(v));
+      this.fs.copyTpl(this.templatePath(v), this.destinationPath(v), {
+        projectName: this.props.name,
+        projectDescription: this.props.description
+      });
     });
     [
       "gitignore",
