@@ -18,12 +18,11 @@ describe("generator-wenye:lib", () => {
   it("creates files", () => {
     assert.file(["README.md"]);
     assert.file(["tsconfig.json"]);
+    assert.file(["jest.config.js"]);
     assert.file([".gitignore"]);
     assert.file([".editorconfig"]);
     assert.file([".prettierrc.js"]);
     assert.file([".travis.yml"]);
-    assert.file([".mocharc.yml"]);
-    assert.file(["bin"]);
     assert.file(["src"]);
     assert.file(["test"]);
   });
